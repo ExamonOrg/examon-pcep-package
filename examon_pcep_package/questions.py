@@ -15,12 +15,6 @@ def question01():
     return result
 
 
-
-@examon_item(choices=['1', '2', '3', '4'],
-             tags=['if', 'elif',
-                   'or', 'operator_precedence'])
-def question01():
-=======
 @examon_item(choices=['1', '2', '3', '4'],
              tags=['if', 'elif',
                    'or', 'operator_precedence'])
@@ -117,9 +111,7 @@ def question01():
     return sum
 
 
-
 @examon_item(choices=[17.5, 8, 17, 8.5], tags=['/', '//', '**'])
-
 def question01():
     return 1 / 2 + 3 // 3 + 4 ** 2
 
