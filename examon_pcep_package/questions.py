@@ -1,9 +1,8 @@
 from examon_core.examon_item import examon_item
 
 
-@examon_item(choices=[
-    'abcdef', 'bdf', 'ace'],
-    tags=['functions', 'tag2'])
+@examon_item(choices=['ace', 'ab', 'ef', 'bdf'],
+             tags=['slicing', 'yield', '+'])
 def question01():
     def func(data):
         for d in data[::2]:
@@ -16,25 +15,16 @@ def question01():
     return result
 
 
-@examon_item(choices=[''], tags=['', ''])
-def question02():
-    sum = count = done = 0
-
-    while done != -1:
-        rating = 7
-        if rating == -1:
-            break
-        sum += rating
-        count += 1
-
-    average = float(sum / count)
-    return f'{average} {sum} {count}'
-
 
 @examon_item(choices=['1', '2', '3', '4'],
              tags=['if', 'elif',
                    'or', 'operator_precedence'])
 def question01():
+=======
+@examon_item(choices=['1', '2', '3', '4'],
+             tags=['if', 'elif',
+                   'or', 'operator_precedence'])
+def question03():
     x = True
     y = False
     z = False
@@ -49,7 +39,7 @@ def question01():
         return 4
 
 
-@examon_item(choices=[''], tags=['', ''])
+@examon_item(choices=['*', '**', '***', '****'], tags=['-=', '+', '=='])
 def question01():
     output = ''
     i = 4
@@ -85,16 +75,16 @@ def question01():
     return ','.join([x, y, z])
 
 
-@examon_item(choices=[''], tags=['', ''])
+@examon_item(choices=['**,**', '**,**,**'], tags=['range', ''])
 def question01():
     array = []
-    for i in range(1, 6):
+    for i in range(1, 3):
         array.append(str(i) * 2)
 
     return ','.join(array)
 
 
-@examon_item(choices=[''], tags=['', ''])
+@examon_item(choices=['-1', '2', '0'], tags=['', ''])
 def question01():
     try:
         return 2 % 0
@@ -102,24 +92,12 @@ def question01():
         return -1
 
 
-@examon_item(choices=[''], tags=['', ''])
+@examon_item(choices=["<class 'float'>", "<class 'decimal'>"], tags=['/', '__class__'])
 def question01():
     return (2 / 2).__class__
 
 
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    def fun(a, b, c=0):
-        return ''.join([a, b, c])
-
-    return ';'.join(
-        [
-            fun(1, 2, 3),
-            fun(a=1, b=2, c=3)]
-    )
-
-
-@examon_item(choices=[''], tags=['', ''])
+@examon_item(choices=['True', 'False', 'None'], tags=['not', 'in', 'list'])
 def question01():
     return 0 not in [False, True, "2", 3, 4, 5]
 
@@ -139,22 +117,24 @@ def question01():
     return sum
 
 
-@examon_item(choices=[17.5, 8, 17, 8.5], tags=['', ''])
+
+@examon_item(choices=[17.5, 8, 17, 8.5], tags=['/', '//', '**'])
+
 def question01():
     return 1 / 2 + 3 // 3 + 4 ** 2
 
 
-@examon_item(choices=['3011.0', '3011', '60.22', '60'], tags=['', ''])
+@examon_item(choices=['3011.0', '3011', '60.22', '60'], tags=['exponential'])
 def question01():
     return 30.11E2
 
 
-@examon_item(choices=[''], tags=['', ''])
+@examon_item(choices=['0o213'], tags=['octal'])
 def question01():
     return 0o213
 
 
-@examon_item(choices=[''], tags=['', ''])
+@examon_item(choices=[''], tags=['/', '//'])
 def question01():
     return [3 / 5, 3 // 5]
 
@@ -194,28 +174,13 @@ def question01():
 
 @examon_item(choices=[''], tags=['', ''])
 def question01():
-    data = ['Peter', 404, 3.03, 'Wellert', 33.3]
+    data = ['Peter', '404', '3.03', 'Wellert', '33.3']
     return ''.join(data[1:3])
 
 
 @examon_item(choices=[0.2, 0, 0.4, 0.0], tags=['', ''])
 def question01():
     return 1 // 5 + 1 / 5
-
-
-@examon_item(choices=[8, 6, 2, 4], tags=['', ''])
-def question01():
-    x = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
-
-    def func(data):
-        res = data[0][0]
-        for da in data:
-            for d in da:
-                if res < d:
-                    res = d
-        return res
-
-    return func(x[0])
 
 
 @examon_item(choices=[''], tags=['', ''])
@@ -313,15 +278,7 @@ def question01():
     list1 = [1, 3]
     list2 = list1
     list1[0] = 4
-    print(list2)
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    def fun(x, y, z):
-        return x + 2 * y + 3 * z
-
-    return fun(0, z=1, y=3)
+    return list2
 
 
 @examon_item(choices=[''], tags=['', ''])
@@ -417,84 +374,34 @@ def question01():
 
 @examon_item(choices=[''], tags=['', ''])
 def question01():
-    ...
+    def fun(a, b, c=0):
+        return f'{a}, {b}, {c}'
 
+    return ';'.join(
+        [
+            fun(1, 2, 3),
+            fun(a=1, b=2, c=3)
+        ]
+    )
 
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
+#
+# @examon_item(choices=[''])
+# def question01():
+#     def fun(x, y, z):
+#         return x + 2 * y + 3 * z
+#
+#     return fun(0, z=1, y=3)
 
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
-
-
-@examon_item(choices=[''], tags=['', ''])
-def question01():
-    ...
+# @examon_item(choices=[8, 6, 2, 4], tags=['', ''])
+# def question01():
+#     x = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+#
+#     def func(data):
+#         res = data[0][0]
+#         for da in data:
+#             for d in da:
+#                 if res < d:
+#                     res = d
+#         return res
+#
+#     return func(x[0])
