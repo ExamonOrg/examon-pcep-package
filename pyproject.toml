@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "examon_pcep_package"
+version = "0.0.1"
+description = ""
+authors = ["Name <email>"]
+packages = [{include = "examon_pcep_package"}]
+
+
+[tool.poetry.dependencies]
+python = ">3.9,<3.12"
+examon-core = "1.2.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
