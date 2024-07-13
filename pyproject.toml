@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "examon_pcep_package"
-version = "0.4.0"
+name = "examon_basic_package"
+version = "0.1.0"
 description = ""
 authors = ["Jarrod Folino <jdfolino@icloud.com>"]
-packages = [{include = "examon_pcep_package"}]
+packages = [{include = "examon_basic_package"}]
 
 
 [tool.poetry.dependencies]
 python = ">3.9,<3.12"
-examon-core = "2.0.1"
+examon-core = { path = "../examon-core" }
 
 [build-system]
 requires = ["poetry-core"]

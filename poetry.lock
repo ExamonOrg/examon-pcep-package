@@ -42,13 +42,13 @@ typing-inspect = "*"
 
 [[package]]
 name = "examon-core"
-version = "2.0.1"
+version = "2.0.5"
 description = "Examon Core Libs"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "examon_core-2.0.1-py3-none-any.whl", hash = "sha256:3b36bb0e823439f5dcd1fcf876fe8a6aaf16ada5409d41782fabcf23ff3685ce"},
-    {file = "examon_core-2.0.1.tar.gz", hash = "sha256:c6359f0729986978811aa8f0ccd7496ddcab9ee77736f2f2751d8874a942ac70"},
+    {file = "examon_core-2.0.5-py3-none-any.whl", hash = "sha256:52fd92268a07cad4e7a697f38cc8c0e2b89d5a6cebddc298678e2b531b5fce18"},
+    {file = "examon_core-2.0.5.tar.gz", hash = "sha256:e400a852cea9d5052150d37f493c1d9d88868173b2d46b1a6398d615dfb0a5a8"},
 ]
 
 [package.dependencies]
@@ -150,13 +150,13 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.11.0"
+version = "4.12.2"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.11.0-py3-none-any.whl", hash = "sha256:c1f94d72897edaf4ce775bb7558d5b79d8126906a14ea5ed1635921406c0387a"},
-    {file = "typing_extensions-4.11.0.tar.gz", hash = "sha256:83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"},
+    {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
+    {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
 ]
 
 [[package]]
@@ -177,4 +177,4 @@ typing-extensions = ">=3.7.4"
 [metadata]
 lock-version = "2.0"
 python-versions = ">3.9,<3.12"
-content-hash = "9b4c2b31ed5161eff90fd1779acfb3a17112c2418b05a5bb6308bbb5de8519a1"
+content-hash = "d94bdac372544cf27333d0e2a3612736e0f24806fa6c391f0a3655bbf5010a26"
