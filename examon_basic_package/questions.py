@@ -2,10 +2,6 @@ from examon_core.examon import examon
 
 REPOSITORY = "examon_basic_package"
 
-from examon_core.examon import examon
-
-REPOSITORY = "python_zero_to_hero"
-
 
 @examon(repository=REPOSITORY, tags=["Python Data & Structure Basics", "Numbers"])
 def question():
@@ -149,7 +145,7 @@ def question():
 )
 def question():
     mystring = "Hello World"
-    return type(a)
+    return type(mystring)
 
 
 @examon(
@@ -803,15 +799,6 @@ def question():
     name = "James"
     number = 1
     if name != "Bob" or number < 5:
-        return f"Hello {name}"
-
-    return name
-
-
-@examon(repository=REPOSITORY, tags=["hello"])
-def question():
-    number = 1
-    if number > 8 or number < 5:
         return f"Hello {name}"
 
     return name
